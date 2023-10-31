@@ -8,6 +8,7 @@ from users.users import User
 class RegistrationPage:
     def open_form(self):
         browser.open('/automation-practice-form')
+        browser.execute_script('document.querySelector(".body-height").style.transform = "scale(.75)"')
         return self
 
     def submit_form(self, user: User):
